@@ -14,4 +14,4 @@ venue: "Preprint"
 #   }
 # code: https://github.com/vsimkus/academic-jekyll
 ---
-UniDEC defines a “pick-some-labels” multi-class reduction for multilabel classification over a batch and leverages Supervised Contrastive Learning to train both the dual encoder and classifier in a unified end-to-end fashion, achieving state-of-the-art performance on a single GPU.
+We propose a “Pick-Some-Labels” reduction for multilabel classification - a relaxation of the conventional "Pick-All-Labels" reduction. This is coupled with Supervised Contrastive Learning to develop a framework - UniDEC - to concurrently train a dual encoder and classifier. UniDEC achieves state-of-the-art performance on a single GPU, rivalling baselines which require 8-16 GPUs.
