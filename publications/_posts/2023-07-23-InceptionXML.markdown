@@ -12,5 +12,6 @@ venue: "SIGIR"
 #   journal={arXiv preprint arXiv:2109.07319},
 #   year={2021}
 #   }
+code: "https://github.com/xmc-aalto/inceptionxml"
 ---
 We developed a lightweight convolutional encoder, InceptionXML, in a dynamic negative sampling framework, SyncXML, for short-text extreme classification. InceptionXML in SyncXML beat the previous SOTA on a multitude of performance and parametric metrics.
