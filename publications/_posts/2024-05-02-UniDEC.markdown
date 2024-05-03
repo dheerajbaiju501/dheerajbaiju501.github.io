@@ -1,6 +1,6 @@
 ---
 title:  "UniDEC: Unified Dual Encoder and Classifier Training for Extreme Multi-label Classification"
-date:   2024-05-04
+date:   2024-05-02
 image: /publications/images/UniDEC.png
 # image_onhover: /publications/images/project-image-on-hover.jpg
 authors: "Siddhant Kharbanda*, <strong>Devaansh Gupta*</strong>, Gururaj K, Pankaj Malhotra, Cho-Jui Hsieh, Rohit Babbar"
