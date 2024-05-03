@@ -1,7 +1,7 @@
 ---
 title:  "<a href=\"https://arxiv.org/pdf/2308.15226.pdf\">CLIPTrans: Transferring Visual Knowledge with Pre-trained Models for Multimodal Machine Translation</a>"
 date:   2023-08-29
-image: /publications/images/CLIPTrans.png
+image: /publications/images/CLIPTrans.gif
 authors: "<strong>Devaansh Gupta</strong>, Siddhant Kharbanda, Jiawei Zhou, Wanhua Li, Hanspeter Pfister, Donglai Wei"
 venue: "ICCV"
 # bib: |
