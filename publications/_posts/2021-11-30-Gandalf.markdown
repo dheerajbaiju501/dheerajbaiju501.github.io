@@ -1,5 +1,5 @@
 ---
-title:  "<a href=\"https://openreview.net/pdf?id=05ff9BRSMzE\">Gandalf : Data Augmentation is all you need for Extreme Classification</a>"
+title:  "<a href=\"https://arxiv.org/abs/2405.04545\">Gandalf : Data Augmentation is all you need for Extreme Classification</a>"
 date:   2021-09-30
 image: /publications/images/Gandalf.png
 # image_onhover: /publications/images/project-image-on-hover.jpg
