@@ -1,10 +1,10 @@
 ---
 title:  "<a href=\"https://arxiv.org/abs/2405.04545\">Learning label-label correlations in Extreme Multi-label Classification via Label Features</a>"
-date:   2021-09-30
+date:   2024-04-02
 image: /publications/images/Gandalf.png
 # image_onhover: /publications/images/project-image-on-hover.jpg
 authors: "Siddhant Kharbanda, <strong>Devaansh Gupta</strong>, Erik Schultheis, Atmadeep Banerjee, Cho-Jui Hsieh, Rohit Babbar"
-venue: "Preprint"
+venue: "KDD"
 # bib: |
 #   @article{Doe2021,
 #     author = {Doe J.},
