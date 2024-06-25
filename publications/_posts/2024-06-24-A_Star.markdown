@@ -5,14 +5,7 @@ image: /publications/images/project-image.jpg
 # image_onhover: /publications/images/InceptionXML.png
 authors: "<strong>Devaansh Gupta</strong>, Boyang Li"
 venue: "Preprint"
-# bib: |
-#   @article{kharbanda2021inceptionxml,
-#   title={InceptionXML: A Lightweight Framework with Synchronized Negative Sampling for Short Text Extreme Classification},
-#   author={Kharbanda, Siddhant and Banerjee, Atmadeep and Palrecha, Akash and Gupta, Devaansh and Babbar, Rohit},
-#   journal={arXiv preprint arXiv:2109.07319},
-#   year={2021}
-#   }
 # code: "https://github.com/xmc-aalto/inceptionxml"
 # arxiv: "https://arxiv.org/abs/2109.07319"
 ---
-We study the most important aspect of LM-based tree-search algorithms, the heuristic, by disentangling the search process from heuristic learning. Subsequently, we find that the while the requirements of both algorithms overlap, they are not exactly the same. We thus develop a mathematical model to select training data in accordance with both algorithms, achieving significant speed-ups in classical planning domains.
+We study an important aspect of LM-based tree-search algorithms, the heuristic, by disentangling the search process from heuristic learning. Subsequently, we develop a mathematical model to select training data in accordance with both algorithms, achieving significant speed-ups in finding solutions to classical planning problems.
