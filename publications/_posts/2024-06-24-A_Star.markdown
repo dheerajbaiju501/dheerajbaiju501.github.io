@@ -1,5 +1,5 @@
 ---
-title: "A Training Data Recipe to Accelerate A* Search with Language Modles"
+title: "<a>A Training Data Recipe to Accelerate A* Search with Language Models</a>"
 date:  2024-06-24
 image: /publications/images/project-image.jpg
 # image_onhover: /publications/images/InceptionXML.png
