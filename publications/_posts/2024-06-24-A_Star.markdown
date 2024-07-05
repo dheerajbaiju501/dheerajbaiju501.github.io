@@ -1,7 +1,7 @@
 ---
 title: "<a>A Training Data Recipe to Accelerate A* Search with Language Models</a>"
 date:  2024-06-24
-image: /publications/images/project-image.jpg
+image: /publications/images/a_star.png
 # image_onhover: /publications/images/InceptionXML.png
 authors: "<strong>Devaansh Gupta</strong>, Boyang Li"
 venue: "Preprint"
