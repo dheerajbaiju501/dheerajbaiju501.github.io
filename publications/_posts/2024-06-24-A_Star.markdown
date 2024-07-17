@@ -1,11 +1,11 @@
 ---
-title: "<a>A Training Data Recipe to Accelerate A* Search with Language Models</a>"
+title: "<a href="https://arxiv.org/abs/2407.09985v1">A Training Data Recipe to Accelerate A* Search with Language Models</a>"
 date:  2024-06-24
 image: /publications/images/a_star.png
 # image_onhover: /publications/images/InceptionXML.png
 authors: "<strong>Devaansh Gupta</strong>, Boyang Li"
 venue: "Preprint"
 # code: "https://github.com/xmc-aalto/inceptionxml"
-# arxiv: "https://arxiv.org/abs/2109.07319"
+arxiv: "https://arxiv.org/abs/2407.09985v1"
 ---
 We study an important aspect of LM-based tree-search algorithms, the heuristic, by disentangling the search process from heuristic learning. Subsequently, we develop a mathematical model to select training data in accordance with both algorithms, achieving significant speed-ups in finding solutions to classical planning problems.
