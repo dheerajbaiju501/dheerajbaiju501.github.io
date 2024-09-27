@@ -4,7 +4,7 @@ date:  2024-06-24
 image: /publications/images/a_star.png
 # image_onhover: /publications/images/InceptionXML.png
 authors: "<strong>Devaansh Gupta</strong>, Boyang Li"
-venue: "Preprint"
+venue: "Findings of EMNLP 2024"
 # code: "https://github.com/xmc-aalto/inceptionxml"
 # arxiv: "https://arxiv.org/abs/2407.09985v1"
 ---
