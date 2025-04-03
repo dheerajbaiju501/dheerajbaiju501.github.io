@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="d1: Scaling ">
+  <meta name="keywords" content="CLIP, mBART, NMT">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>d1: Scaling Reasoning in Diffusion Large Language Models via Test-Time Inference</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://devaansh100.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">d1: Scaling Reasoning in Diffusion Large Language Models via Test-Time Inference</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://siyan-zhao.github.io">Siyan Zhao*</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://devaansh100.github.io">Devaansh Gupta*</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://enosair.github.io">Qinqing Zheng</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://aditya-grover.github.io">Aditya Grover</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of California, Los Angeles</span>
+            <span class="author-block"><sup>2</sup>Meta AI</span>
+          </div>
+          <!-- <div class="is-size-6 publication-authors">
+            <span class="author-block">Published in International Conference of Computer Vision, 2023</span>
+          </div> -->
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Research Question</h2>
+          <div class="container is-max-desktop">
+            <div class="container has-text-centered">
+              <figure class="image is-50x-auto is-inline-block">
+                <img src="./static/images/pull_fig.pdf" alt="teaser image" style="max-width: 60%; display: block; margin: 0 auto;">
+                <h2 class="subtitle has-text-centered">
+                  How to scale Reasoning for dLLMs, and can they serve as effective reasoning models? We propose diffu-Budget Forcing and diffu-GRPO, and further demonstrate how this compares to conventional SFT on reasoning traces.
+              </h2>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+
+<section class="hero teaser mt-6">
+  <div class="container is-max-desktop">
+    <div class="container has-text-centered">
+      <h2 class="title is-3">Overview</h2>
+      <figure class="item item-steve">
+        <img src="./static/images/training.gif" alt="gif showing training pipeline">
+        <!-- <video autoplay loop controls preload="auto" height="200%">
+            <source src="./static/videos/training.mp4" type="video/mp4">
+          </video> -->
+        <h2 class="subtitle has-text-centered">
+          Can existing open-source dLLMs show self-correction (reasoning) behavior? While this is possible, the percentage of reflections is quite low. We thus propose diffu-budget forcing to elicit reasoning behavior in these models, a training-free technique based on inpainting, as an extension to budget-forcing!
+      </h2>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser mt-6">
+  <div class="container is-max-desktop">
+    <div class="container has-text-centered">
+      <figure class="image is-inline-block">
+        <img src="./static/images/captioning.jpg" alt="Centered Image">
+        <h2 class="subtitle has-text-centered">
+          But does reasoning behavior correlate with reasoning performance? We find it does not - while models do show more reasoning behaviours with diffu-budget forcing, the performance is worse. This is a consequence of a weak base model. As shown in the qualitative examples, the model often backtracks from the right to the wrong answer.
+      </h2>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser mt-6">
+  <div class="container is-max-desktop">
+    <div class="container has-text-centered">
+      <figure class="image is-inline-block">
+        <img src="./static/images/captioning.jpg" alt="Centered Image">
+        <h2 class="subtitle has-text-centered">
+          But then how to scale reasoning? To this end, we propose diffu-GRPO - a variation of GRPO for dLLMs. We make three simple changes to conventional GRPO, (i) Replace AR generation with iterative denoising steps, (ii) instead of directly calculating the log probability, we estimate it via monte-carlo sampling (since dLLMs optimize an ELBO) and (iii) while performing multiple update steps on a prompt, we enhance the learning signal by randomly masking the prompt in each iteration, leading to much faster convergence. While this would be OOD for AR models, it is in-distribution for dLLMs.
+      </h2>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            There has been a growing interest in developing multimodal machine translation (MMT) systems that enhance neural machine translation (NMT) with visual knowledge. This problem setup involves using images as auxiliary information during training, and more recently, eliminating their use during inference. Towards this end, previous works face a challenge in training powerful MMT models from scratch due to the scarcity of annotated multilingual vision-language data, especially for low-resource languages. 
+          </p>
+          <p>
+            Simultaneously, there has been an influx of multilingual pre-trained models for NMT and multimodal pre-trained models for vision-language tasks, primarily in English, which have shown exceptional generalisation ability. However, these are not directly applicable to MMT since they do not provide aligned multimodal multilingual features for generative tasks.
+         </p>
+         <p>
+            To alleviate this issue, instead of designing complex modules for MMT, we propose CLIPTrans, which simply adapts the independently pre-trained multimodal M-CLIP and the multilingual mBART. In order to align their embedding spaces, mBART is conditioned on the M-CLIP features by a prefix sequence generated through a lightweight mapping network. We train this in a two-stage pipeline which warms up the model with image captioning before the actual translation task. Through experiments, we demonstrate the merits of this framework and consequently push forward the state-of-the-art across standard benchmarks by an average of +2.67 BLEU.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/Mhapx61G9Zk?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-max-desktop">
+        <h2 class="title is-3">Poster</h2>
+        <figure class="image is-50x-auto is-inline-block">
+          <img src="./static/images/poster.jpg" alt="CLIPTrans poster">
+        </figure>
+      </div>
+    </div>
+    <div class="Concurrent Works">
+      <div class="column is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Concurrent Works</h2>
+          <div class="content">
+            <ol>
+              <li><h4><a href="https://mfuteral.github.io/vgamt.html">Tackling Ambiguity with Images: Improved Multimodal Machine Translation and Contrastive Evaluation</a></h4></li>
+              <li><h4><a href="https://aclanthology.org/2023.findings-acl.168/">Beyond Triplet: Leveraging the Most Data for Multimodal Machine Translation</a></h4></li>
+              
+            </ol>
+      </div>
+    </div>
+
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content has-text-centered">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings {zhaoandgupta2023d1,
+    title={d1: Scaling Reasoning in Diffusion Large Language Models via Test-Time Inference},
+    author={Zhao, Siyan and Gupta, Devaansh and Zheng, Qinqing and Grover, Aditya},
+    booktitle={preprint},
+    year={2025}
+}
+</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/pdf/2308.15226.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/devaansh100" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to <a href="https://nerfies.github.io">this</a> page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
