@@ -167,7 +167,7 @@
     <div class="container has-text-centered">
       <h2 class="title is-3">Overview</h2>
       <figure class="item item-steve">
-        <img src="./static/images/d1.pdf" alt="gif showing training pipeline">
+        <img src="./static/images/d1.pdf" alt="gif showing training pipeline" style="max-width: 110%">
         <!-- <video autoplay loop controls preload="auto" height="200%">
             <source src="./static/videos/training.mp4" type="video/mp4">
           </video> -->
@@ -183,7 +183,7 @@
   <div class="container is-max-desktop">
     <div class="container has-text-centered">
       <figure class="image is-inline-block">
-        <img src="./static/images/gsm8k_performance_comparison.pdf" alt="Centered Image" style="max-width: 70%">
+        <img src="./static/images/gsm8k_performance_comparison.pdf" alt="Centered Image" style="max-width: 70%; display: block; margin: 0 auto">
         <h2 class="subtitle has-text-centered">
           Does reasoning behavior correlate with reasoning performance? We find it does not - while models do show more reasoning behaviours with diffu-budget forcing, the performance is worse. This is a consequence of a weak base model. As shown in the qualitative examples, the model often backtracks from the right to the wrong answer.
       </h2>
@@ -196,7 +196,7 @@
   <div class="container is-max-desktop">
     <div class="container has-text-centered">
       <figure class="image is-inline-block">
-        <img src="./static/images/qualitative_example_1.png" alt="Centered Image" style="max-width: 70%">
+        <img src="./static/images/qualitative_example_1.png" alt="Centered Image" style="max-width: 70%; display: block; margin: 0 auto">
       </h2>
       </figure>
     </div>
@@ -207,7 +207,7 @@
   <div class="container is-max-desktop">
     <div class="container has-text-centered">
       <figure class="image is-inline-block">
-        <img src="./static/images/qualitative_example_2.png" alt="Centered Image" style="max-width: 70%">
+        <img src="./static/images/qualitative_example_2.png" alt="Centered Image" style="max-width: 70%; display: block; margin: 0 auto">
       </h2>
       </figure>
     </div>
@@ -219,7 +219,7 @@
   <div class="container is-max-desktop">
     <div class="container has-text-centered">
       <figure class="image is-inline-block">
-        <img src="./static/images/algorithm.png" alt="Centered Image" style="max-width: 70%">
+        <img src="./static/images/algorithm.png" alt="Centered Image" style="max-width: 70%; display: block; margin: 0 auto">
         <h2 class="subtitle has-text-centered">
           Thus, how to scale reasoning performance? To this end, we propose diffu-GRPO - a variation of GRPO for dLLMs. We make three simple changes to conventional GRPO, (i) Replace AR generation with iterative denoising steps, (ii) instead of directly calculating the log probability, we estimate it via monte-carlo sampling (since dLLMs optimize an ELBO) and (iii) while performing multiple update steps on a prompt, we enhance the learning signal by randomly masking the prompt in each iteration, leading to much faster convergence. While this would be OOD for AR models, it is in-distribution for dLLMs.
       </h2>
@@ -232,7 +232,7 @@
   <div class="container is-max-desktop">
     <div class="container has-text-centered">
       <figure class="image is-inline-block">
-        <img src="./static/images/masking_curves.pdf" alt="Centered Image" style="max-width: 70%">
+        <img src="./static/images/masking_curves.pdf" alt="Centered Image" style="max-width: 70%; display: block; margin: 0 auto">
         <h2 class="subtitle has-text-centered">
           Our random masking strategy significantly speeds up GRPO convergence!
       </h2>
@@ -246,7 +246,7 @@
   <div class="container is-max-desktop">
     <div class="container has-text-centered">
       <figure class="image is-inline-block">
-        <img src="./static/images/results.png" alt="Centered Image" style="max-width: 70%">
+        <img src="./static/images/results.png" alt="Centered Image" style="max-width: 70%; display: block; margin: 0 auto">
         <h2 class="subtitle has-text-centered">
           Performance imporvements with diffu-GRPO.
       </h2>
