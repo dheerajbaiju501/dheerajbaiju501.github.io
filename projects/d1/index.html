@@ -118,7 +118,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="https://github.com/siyan-zhao/diffu-GRPO"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -324,13 +324,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            There has been a growing interest in developing multimodal machine translation (MMT) systems that enhance neural machine translation (NMT) with visual knowledge. This problem setup involves using images as auxiliary information during training, and more recently, eliminating their use during inference. Towards this end, previous works face a challenge in training powerful MMT models from scratch due to the scarcity of annotated multilingual vision-language data, especially for low-resource languages. 
+          Recent large language models have demonstrated strong reasoning capabilities that scale with increased test-time compute. However, these capabilities have mainly relied on the left-to-right autoregressive (AR) generation paradigm.
           </p>
           <p>
-            Simultaneously, there has been an influx of multilingual pre-trained models for NMT and multimodal pre-trained models for vision-language tasks, primarily in English, which have shown exceptional generalisation ability. However, these are not directly applicable to MMT since they do not provide aligned multimodal multilingual features for generative tasks.
-         </p>
-         <p>
-            To alleviate this issue, instead of designing complex modules for MMT, we propose CLIPTrans, which simply adapts the independently pre-trained multimodal M-CLIP and the multilingual mBART. In order to align their embedding spaces, mBART is conditioned on the M-CLIP features by a prefix sequence generated through a lightweight mapping network. We train this in a two-stage pipeline which warms up the model with image captioning before the actual translation task. Through experiments, we demonstrate the merits of this framework and consequently push forward the state-of-the-art across standard benchmarks by an average of +2.67 BLEU.
+          On the other hand, alternate paradigms based on diffusion generate using a coarse-to-fine approach with recent diffusion Large Language Models (dLLMs) exhibiting performance competitive with autoregressive counterparts. While diffusion by design uses adaptive computation at test-time, it is unclear if dLLMs can also benefit from recent advances in LLM reasoning.
+          </p>
+          <p>
+          To this end, we propose d1, a framework to adapt pre-trained masked dLLMs into reasoning models and improve their performance using test-time computation. Specifically, we propose and extend techniques for improving reasoning in pretrained dLLMs: (a) a training-free technique based on inpainting extension to budget-forcing, (b) a masked supervised finetuning (SFT) technique to distill directly from an existing reasoning model, and (c) a reinforcement learning (RL) technique based on a novel critic-free, policy-gradient approach called diffu-GRPO. Empirically, we study design choices for each variant on diverse mathematical and logical reasoning benchmarks. We find that diffu-GRPO works best and significantly improves performance of a state-of-the-art dLLM.
           </p>
         </div>
       </div>
