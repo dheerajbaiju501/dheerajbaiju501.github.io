@@ -73,7 +73,7 @@
               <a href="https://enosair.github.io">Qinqing Zheng</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://aditya-grover.github.io">Aditya Grover</a><sup>1</sup>,
+              <a href="https://aditya-grover.github.io">Aditya Grover</a><sup>1</sup>
             </span>
           </div>
 
@@ -88,7 +88,7 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <span class="link-block">
+<!--               <span class="link-block">
                 <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -97,7 +97,7 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <span class="link-block">
+ -->              <span class="link-block">
                 <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -107,7 +107,7 @@
                 </a>
               </span>
               <!-- Video Link. -->
-              <span class="link-block">
+<!--               <span class="link-block">
                 <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -116,7 +116,7 @@
                   <span>Video</span>
                 </a>
               </span>
-              <!-- Code Link. -->
+ -->              <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/siyan-zhao/diffu-GRPO"
                    class="external-link button is-normal is-rounded is-dark">
@@ -165,6 +165,16 @@
       </div>
 </section>
 
+<section class="hero teaser mt-6">
+  <div class="container is-max-desktop">
+    <div class="container has-text-centered">
+      <figure class="image is-inline-block">
+        <img src="./static/images/qualitative_example_1.png" alt="Centered Image" style="max-width: 70%; display: block; margin: 0 auto">
+      </figure>
+    </div>
+  </div>
+</section>
+
 
 <section class="hero teaser mt-6">
   <div class="container is-max-desktop">
@@ -172,6 +182,9 @@
       <h2 class="title is-3"><i>diffu</i>-GRPO</h2>
       <figure class="item item-steve">
         <img src="./static/images/diffugrpo.pdf" alt="diffugrpo" style="max-width: 200%; display: block; margin: 0 auto;">
+        <figure class="image is-inline-block">
+          <img src="./static/images/algorithm.png" alt="Centered Image" style="max-width: 70%; display: block; margin: 0 auto">
+        </figure>
         <h2 class="subtitle has-text-centered">
           The conventional GRPO algorithm does not directly generalize to dLLMs. The challenge lies in the computation of the log-likelihood of a completion at both, the token and sequence level. While this is straightforward for AR models...
       </h2>
@@ -179,29 +192,6 @@
     </div>
   </div>
 </section>
-
-<section class="hero teaser mt-6">
-  <div class="container is-max-desktop">
-    <div class="container has-text-centered">
-      <figure class="image is-inline-block">
-        <img src="./static/images/qualitative_example_1.png" alt="Centered Image" style="max-width: 70%; display: block; margin: 0 auto">
-      </h2>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser mt-6">
-  <div class="container is-max-desktop">
-    <div class="container has-text-centered">
-      <figure class="image is-inline-block">
-        <img src="./static/images/qualitative_example_2.png" alt="Centered Image" style="max-width: 70%; display: block; margin: 0 auto">
-      </h2>
-      </figure>
-    </div>
-  </div>
-</section>
-
 
 <!-- <section class="hero teaser mt-6">
   <div class="container is-max-desktop">
@@ -228,6 +218,21 @@
     </div>
   </div>
 </section>
+
+<section class="hero teaser mt-6">
+  <div class="container is-max-desktop">
+    <div class="container has-text-centered">
+      <h2 class="title is-3">SFT on Distilled Reasoning Traces</h2>
+        <figure class="image is-inline-block">
+          <img src="./static/images/algorithm_sft.png" alt="Centered Image" style="max-width: 70%; display: block; margin: 0 auto">
+        </figure>
+        <h2 class="subtitle has-text-centered">
+          We adapt the masked SFT algorithm proposed in LLaDA and use it to cold-start <i>diffu</i>-GRPO. Specifically, we perform SFT on distilled reasoning traces from thinking models (the s1K dataset) to imbibe dLLMs with the ability to self-correct.
+      </h2>
+    </div>
+  </div>
+</section>
+
 
 
 <!-- <section class="hero teaser mt-6">
@@ -312,13 +317,12 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-          Recent large language models have demonstrated strong reasoning capabilities that scale with increased test-time compute. However, these capabilities have mainly relied on the left-to-right autoregressive (AR) generation paradigm.
+            Recent large language models (LLMs) have demonstrated strong reasoning capabilities that benefits from online reinforcement learning (RL). These capabilities have primarily been demonstrated within the left-to-right autoregressive (AR) generation paradigm. In contrast, non-autoregressive paradigms based on diffusion generate text in a coarse-to-fine manner. Although recent diffusion-based large language models (dLLMs) have achieved competitive language modeling performance compared to their AR counterparts, it remains unclear if dLLMs can also leverage recent advances in LLM reasoning.
           </p>
           <p>
-          On the other hand, alternate paradigms based on diffusion generate using a coarse-to-fine approach with recent diffusion Large Language Models (dLLMs) exhibiting performance competitive with autoregressive counterparts. While diffusion by design uses adaptive computation at test-time, it is unclear if dLLMs can also benefit from recent advances in LLM reasoning.
-          </p>
+            To this end, we propose <i>d1</i>, a framework to adapt pre-trained masked dLLMs into reasoning models via a combination of supervised fine-tuning (SFT) and RL.
           <p>
-          To this end, we propose d1, a framework to adapt pre-trained masked dLLMs into reasoning models and improve their performance using test-time computation. Specifically, we propose and extend techniques for improving reasoning in pretrained dLLMs: (a) a training-free technique based on inpainting extension to budget-forcing, (b) a masked supervised finetuning (SFT) technique to distill directly from an existing reasoning model, and (c) a reinforcement learning (RL) technique based on a novel critic-free, policy-gradient approach called diffu-GRPO. Empirically, we study design choices for each variant on diverse mathematical and logical reasoning benchmarks. We find that diffu-GRPO works best and significantly improves performance of a state-of-the-art dLLM.
+            Specifically, we develop and extend techniques to improve reasoning in pretrained dLLMs: (a) we utilize a masked SFT technique to distill knowledge and instill self-improvement behavior directly from existing datasets, and (b) we introduce a novel critic-free, policy-gradient based RL algorithm called <i>diffu</i>-GRPO. Through empirical studies, we investigate the performance of different post-training recipes on multiple mathematical and logical reasoning benchmarks. We find that d1 yields the best performance and significantly improves performance of a state-of-the-art dLLM. 
           </p>
         </div>
       </div>
