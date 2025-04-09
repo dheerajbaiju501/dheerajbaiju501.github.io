@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="d1: Scaling ">
+        content="d1: Scaling Reasoning in Diffusion Large Language Models via Reinforcement Learning">
   <meta name="keywords" content="CLIP, mBART, NMT">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>d1: Scaling Reasoning in Diffusion Large Language Models via Test-Time Inference</title>
+  <title>d1: Scaling Reasoning in Diffusion Large Language Models via Reinforcement Learning</title>
 
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -63,7 +63,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">d1: Scaling Reasoning in Diffusion Large Language Models via Test-Time Inference</h1>
+          <h1 class="title is-1 publication-title">d1: Scaling Reasoning in Diffusion Large Language Models via Reinforcement Learning</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://siyan-zhao.github.io">Siyan Zhao*</a><sup>1</sup>,</span>
@@ -147,13 +147,16 @@
 <section class="hero teaser">
   <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Research Question</h2>
+        <h2 class="title is-3">Overview</h2>
           <div class="container is-max-desktop">
             <div class="container has-text-centered">
               <figure class="image is-50x-auto is-inline-block">
-                <img src="./static/images/pull_fig.pdf" alt="teaser image" style="max-width: 70%; display: block; margin: 0 auto;">
+                <img src="./static/images/pull_fig.pdf" alt="teaser image" style="max-width: 80%; display: block; margin: 0 auto;">
+                <h2 class="title is-3"></h2>
+                <img src="./static/images/sota_comparison_dual_axis.pdf" alt="teaser image" style="max-width: 80%; display: block; margin: 0 auto;">
+                <h2 class="title is-3"></h2>
                 <h2 class="subtitle has-text-centered">
-                  How to scale Reasoning for dLLMs, and can they serve as effective reasoning models? We propose diffu-Budget Forcing and diffu-GRPO, and further demonstrate how this compares to conventional SFT on reasoning traces.
+                  We propose d1, a two-stage framework that enhances the reasoning performance of pre-trained masked dLLMs by sequentially combining SFT and online RL. Using LLaDA-8B-Instruct as our base model, we show significant improvements with our method across four reasoning tasks, and against a suite of SOTA models.
               </h2>
               </figure>
             </div>
@@ -162,30 +165,15 @@
       </div>
 </section>
 
-<section class="hero teaser mt-6">
-  <div class="container is-max-desktop">
-    <div class="container has-text-centered">
-      <h2 class="title is-3">Overview</h2>
-      <figure class="item item-steve">
-        <img src="./static/images/d1.pdf" alt="gif showing training pipeline" style="max-width: 110%">
-        <!-- <video autoplay loop controls preload="auto" height="200%">
-            <source src="./static/videos/training.mp4" type="video/mp4">
-          </video> -->
-        <h2 class="subtitle has-text-centered">
-          Can existing open-source dLLMs show self-correction (reasoning) behavior? While this is possible, the percentage of reflections is quite low. We thus propose diffu-budget forcing to elicit reasoning behavior in these models, a training-free technique based on inpainting, as an extension to budget-forcing!
-      </h2>
-      </figure>
-    </div>
-  </div>
-</section>
 
 <section class="hero teaser mt-6">
   <div class="container is-max-desktop">
     <div class="container has-text-centered">
-      <figure class="image is-inline-block">
-        <img src="./static/images/gsm8k_performance_comparison.pdf" alt="Centered Image" style="max-width: 70%; display: block; margin: 0 auto">
+      <h2 class="title is-3"><i>diffu</i>-GRPO</h2>
+      <figure class="item item-steve">
+        <img src="./static/images/diffugrpo.pdf" alt="diffugrpo" style="max-width: 200%; display: block; margin: 0 auto;">
         <h2 class="subtitle has-text-centered">
-          Does reasoning behavior correlate with reasoning performance? We find it does not - while models do show more reasoning behaviours with diffu-budget forcing, the performance is worse. This is a consequence of a weak base model. As shown in the qualitative examples, the model often backtracks from the right to the wrong answer.
+          The conventional GRPO algorithm does not directly generalize to dLLMs. The challenge lies in the computation of the log-likelihood of a completion at both, the token and sequence level. While this is straightforward for AR models...
       </h2>
       </figure>
     </div>
@@ -215,7 +203,7 @@
 </section>
 
 
-<section class="hero teaser mt-6">
+<!-- <section class="hero teaser mt-6">
   <div class="container is-max-desktop">
     <div class="container has-text-centered">
       <figure class="image is-inline-block">
@@ -227,7 +215,7 @@
     </div>
   </div>
 </section>
-
+ -->
 <section class="hero teaser mt-6">
   <div class="container is-max-desktop">
     <div class="container has-text-centered">
@@ -242,7 +230,7 @@
 </section>
 
 
-<section class="hero teaser mt-6">
+<!-- <section class="hero teaser mt-6">
   <div class="container is-max-desktop">
     <div class="container has-text-centered">
       <figure class="image is-inline-block">
@@ -254,7 +242,7 @@
     </div>
   </div>
 </section>
-
+ -->
 
 
 
@@ -338,7 +326,7 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+  <!--   <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -346,8 +334,8 @@
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
-    <div class="columns is-centered has-text-centered">
+    </div> -->
+<!--     <div class="columns is-centered has-text-centered">
       <div class="column is-max-desktop">
         <h2 class="title is-3">Poster</h2>
         <figure class="image is-50x-auto is-inline-block">
@@ -355,7 +343,7 @@
         </figure>
       </div>
     </div>
-    <div class="Concurrent Works">
+ --><!--     <div class="Concurrent Works">
       <div class="column is-max-desktop">
         <h2 class="title is-3 has-text-centered">Concurrent Works</h2>
           <div class="content">
@@ -366,7 +354,7 @@
             </ol>
       </div>
     </div>
-
+ -->
     <!--/ Paper video. -->
   </div>
 </section>
