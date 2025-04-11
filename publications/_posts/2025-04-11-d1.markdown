@@ -1,5 +1,5 @@
 ---
-title:  "<a href=\"https://openaccess.thecvf.com/content/ICCV2023/html/Gupta_CLIPTrans_Transferring_Visual_Knowledge_with_Pre-trained_Models_for_Multimodal_Machine_ICCV_2023_paper.html\">CLIPTrans: Transferring Visual Knowledge with Pre-trained Models for Multimodal Machine Translation</a>"
+title:  "d1: Scaling Reasoning in Diffusion Large Language Models via Reinforcement Learning"
 date:   2025-04-11
 image: /publications/images/d1_pull_fig.png
 authors: "Siyan Zhao*, <strong>Devaansh Gupta*</strong>, Qinqing Zheng, Aditya Grover"
