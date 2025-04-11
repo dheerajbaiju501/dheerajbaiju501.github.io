@@ -1,10 +1,10 @@
 ---
-title:  "<a href=\"https://arxiv.org/abs/2405.03714v1\">UniDEC: Unified Dual Encoder and Classifier Training for Extreme Multi-label Classification</a>"
+title:  "<a href=\"https://arxiv.org/abs/2405.03714\">UniDEC: Unified Dual Encoder and Classifier Training for Extreme Multi-label Classification</a>"
 date:   2024-05-02
 image: /publications/images/UniDEC.png
 # image_onhover: /publications/images/project-image-on-hover.jpg
 authors: "<strong>Devaansh Gupta*</strong>, Siddhant Kharbanda*, Gururaj K, Pankaj Malhotra, Amit Singh, Cho-Jui Hsieh, Rohit Babbar"
-venue: "Preprint"
+venue: "WWW"
 # bib: |
 #   @article{Doe2021,
 #     author = {Doe J.},

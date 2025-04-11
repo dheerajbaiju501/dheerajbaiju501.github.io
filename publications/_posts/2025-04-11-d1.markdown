@@ -1,0 +1,18 @@
+---
+title:  "<a href=\"https://openaccess.thecvf.com/content/ICCV2023/html/Gupta_CLIPTrans_Transferring_Visual_Knowledge_with_Pre-trained_Models_for_Multimodal_Machine_ICCV_2023_paper.html\">CLIPTrans: Transferring Visual Knowledge with Pre-trained Models for Multimodal Machine Translation</a>"
+date:   2025-04-11
+image: /publications/images/d1_pull_fig.png
+authors: "Siyan Zhao*, <strong>Devaansh Gupta*</strong>, Qinqing Zheng, Aditya Grover"
+# venue: "ICCV"
+# bib: |
+#   @article{Doe2021,
+#     author = {Doe J.},
+#     journal = {A journal of imaginary research},
+#     title = {Another title of the publication},
+#     year = {2021}
+#   }
+project: https://dllm-reasoning.github.io/
+code: https://github.com/dllm-reasoning/d1
+arxiv: https://dllm-reasoning.github.io/media/preprint.pdf
+---
+We propose a two-stage framework, d1, that employs masked SFT on distilled reasoning traces, followed by a variant of GRPO for dLLMs, called diffu-GRPO, to convert prertrained dLLMs into storng reasoning models. With this, we demonstrate strong reasoning performance against AR models, and superior convergence rate to conventional GRPO!
