@@ -1,7 +1,7 @@
 ---
 title:  "d1: Scaling Reasoning in Diffusion Large Language Models via Reinforcement Learning"
 date:   2025-04-11
-image: /publications/images/d1_pull_fig.png
+image: /publications/images/SyncXML.png
 authors: "Siyan Zhao*, <strong>Devaansh Gupta*</strong>, Qinqing Zheng, Aditya Grover"
 venue: "preprint"
 # bib: |
@@ -15,4 +15,4 @@ project: https://dllm-reasoning.github.io/
 code: https://github.com/dllm-reasoning/d1
 arxiv: https://dllm-reasoning.github.io/media/preprint.pdf
 ---
-We propose a two-stage framework, d1, that employs masked SFT on distilled reasoning traces, followed by a variant of GRPO for dLLMs, called diffu-GRPO, to convert prertrained dLLMs into storng reasoning models. With this, we demonstrate strong reasoning performance against AR models, and superior convergence rate to conventional GRPO!
+We propose a two-stage framework, d1, that employs masked SFT on distilled reasoning traces, followed by a variant of GRPO for dLLMs, called diffu-GRPO, to convert prertrained dLLMs into storng reasoning models. With this, we demonstrate strong reasoning performance against AR models, and faster convergence rate than conventional GRPO!
