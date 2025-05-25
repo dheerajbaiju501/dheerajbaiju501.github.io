@@ -1,9 +1,7 @@
 ---
-layout: post
 title:  "Revisiting Point Cloud Completion: Are We Ready For The Real-World?"
 date:   2025-04-17 22:21:59 +00:00
 image: /publications/images/realpc2.png
-categories: research
 authors: "Stuti Pathak, Prashant Kumar, <strong>Dheeraj Baiju</strong>, Nicholus Mboga, Gunther Steenackers, Rudi Penne"
 venue: "Under Review at ICCV"
 arxiv: "https://arxiv.org/abs/2411.17580"
