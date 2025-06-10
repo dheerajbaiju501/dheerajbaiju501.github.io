@@ -7,7 +7,7 @@ venue: "Under Review at International Conference on Computer Vision (ICCV)"
 arxiv: "https://arxiv.org/abs/2411.17580"
 ---
 
-We present RealPC, a large-scale real-world industrial point cloud dataset with paired scans of incomplete and complete objects, captured in challenging, uncontrolled multi-sensor environments. Unlike synthetic datasets, RealPC features significant noise, non-uniformity, and rich topological structures revealed via topological data analysis (TDA). Benchmarking shows that existing completion methods perform poorly on this data, exposing a gap in current approaches. To address this, we propose BOSHNet, a lightweight model that extracts multi-scale skeletal priors inspired by 0D persistent homology, guiding the network from early training toward structurally accurate completions.
+We introduce RealPC, a real-world industrial point cloud dataset with paired complete and incomplete scans, captured under challenging, uncontrolled conditions. RealPC differs from synthetic datasets in terms of noise, non-uniformity, and richer topological features, as shown through topological data analysis. Standard completion models perform poorly on it, highlighting a gap in existing methods. To tackle this, we propose BOSHNet, a simple network that extracts multi-scale skeletal priors inspired by 0D persistent homology to guide shape completion from early training.
 
 
 
