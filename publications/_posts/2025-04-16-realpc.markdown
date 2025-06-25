@@ -1,9 +1,9 @@
 ---
 title:  "Revisiting Point Cloud Completion: Are We Ready For The Real-World?"
-date:   2025-04-17 22:21:59 +00:00
+date:   2025-06-24 22:21:59 +00:00
 image: /publications/images/realpc2.png
 authors: "Stuti Pathak*, Prashant Kumar*, <strong>Dheeraj Baiju</strong>, Nicholus Mboga, Gunther Steenackers, Rudi Penne"
-venue: "Under Review at International Conference on Computer Vision (ICCV)"
+venue: "International Conference on Computer Vision (ICCV)"
 arxiv: "https://arxiv.org/abs/2411.17580"
 ---
 We propose RealPC, a real-world industrial point cloud dataset with rich topological features, and presents BOSHNet, a model that leverages these features to improve point cloud completion.
