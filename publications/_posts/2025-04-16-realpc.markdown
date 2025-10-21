@@ -6,7 +6,8 @@ authors: "Stuti Pathak*, Prashant Kumar*, <strong>Dheeraj Baiju</strong>, Nichol
 venue: "International Conference on Computer Vision (ICCV)"
 arxiv: "https://arxiv.org/abs/2411.17580"
 ---
-We propose RealPC, a real-world industrial point cloud dataset with rich topological features, and presents BOSHNet, a model that leverages these features to improve point cloud completion.
+We introduce 𝐑𝐞𝐚𝐥𝐏𝐂, a real-world paired industrial object point cloud dataset, and show how it’s fundamentally different from existing synthetic datasets, exhibiting rich topological features.
+We highlight the importance of integrating Persistent Homology priors into existing point cloud completion models, and present a Homology Sampler-based completion model, 𝐁𝐎𝐒𝐇𝐍𝐞𝐭.
 
 
 
