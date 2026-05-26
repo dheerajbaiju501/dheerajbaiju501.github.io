@@ -6,7 +6,7 @@ authors: "Shyam Marjit*, <strong>Dheeraj Baiju*</strong>, Anuj Shikarkhane, Akhi
 venue: "Under Review"
 arxiv: "https://openreview.net/pdf?id=eaVoaI7f8v"
 ---
-This survey studies the evolution of multimodal AI agents that combine perception, reasoning, planning, memory, and action across text, images, audio, and video. It introduces a modality-centric taxonomy of agent architectures, analyzes multimodal fusion strategies, and reviews applications spanning robotics, web navigation, multimedia generation, and long-form video understanding, while highlighting key challenges toward building robust general-purpose agentic systems.
+We introduce DynEval, a dynamic framework for evaluating text-to-image generation that jointly assesses prompt alignment and image quality. To enable scalable training, we construct GenDB and DynEvalInstruct, two large-scale datasets containing generated prompt–image pairs and structured evaluation instructions. By distilling a strong multimodal teacher into compact 2B and 4B evaluator models, DynEval achieves higher correlation with human judgments than existing T2I evaluators while also providing fine-grained diagnostic feedback on generation failures.
 
 
 
