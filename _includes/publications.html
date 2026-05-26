@@ -2,11 +2,11 @@
 {% if publication_posts.size > 0 %}
 <div class="row py-2">
     <div class="col-md-12" id="publications">
-        <h2>Publications</h2>
+        <h2>Publications <span class="text-muted" style="font-size: 1rem; font-weight: normal; margin-left: 0.5rem;">(* denotes equal contribution)</span></h2>
     </div>
 </div>
 {% for post in publication_posts %}
-<div class="row py-2 publication">
+<div class="row py-2 publication align-items-center">
     <div class="col-md-4 col-sm-12 project-thumbnail-parent" align="center">
         <img class="project-thumbnail {% if post.image_onhover %} pre-hover {% endif %}" src="{{site.baseurl}}/tn{{post.image}}" alt="project image" />
         {% if post.image_onhover %}
