@@ -6,7 +6,7 @@ authors: "Neel Mokaria*, Rishie Raj*, <strong>Dheeraj Baiju*</strong>, Xiaoqian 
 venue: "TMLR"
 arxiv: "https://openreview.net/pdf?id=eaVoaI7f8v"
 ---
-This survey examines the rapidly evolving landscape of multimodal agentic AI systems, highlighting how advances in large multimodal models (LMMs) are transforming agents from text-only reasoning systems into frameworks capable of perception, planning, memory, and action across diverse modalities such as images, audio, and video. The paper introduces a modality-centric taxonomy of agent architectures, analyzes fusion strategies and emergent agentic behaviors, and reviews applications spanning robotics, GUI/web navigation, multimedia generation, and long-form video understanding. It further discusses efficiency–scalability trade-offs and outlines key challenges toward building robust and general-purpose multimodal intelligent systems.
+This survey studies the evolution of multimodal AI agents that combine perception, reasoning, planning, memory, and action across text, images, audio, and video. It introduces a modality-centric taxonomy of agent architectures, analyzes multimodal fusion strategies, and reviews applications spanning robotics, web navigation, multimedia generation, and long-form video understanding, while highlighting key challenges toward building robust general-purpose agentic systems.
 
 
 
