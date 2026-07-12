@@ -1,12 +1,9 @@
 {% assign publication_posts = site.categories.publications %}
 {% if publication_posts.size > 0 %}
-<section class="publications-section section-rule" id="publications" aria-labelledby="publications-title">
-  <div class="section-heading section-heading--publications">
-    <div>
-      <p class="section-index">02</p>
-      <h2 id="publications-title">Selected publications</h2>
-    </div>
-    <p class="section-note">* Equal contribution</p>
+<section class="research" id="publications" aria-labelledby="publications-title">
+  <div class="section-title">
+    <h2 id="publications-title">Research</h2>
+    <span>* equal contribution</span>
   </div>
 
   <div class="publication-list">
@@ -20,25 +17,21 @@
       </div>
 
       <div class="publication__content">
-        <div class="publication__meta">
-          <span>{{ post.venue }}</span>
-          <span>{{ post.date | date: "%Y" }}</span>
-        </div>
         <h3>{{ post.title }}</h3>
         <div class="publication__authors">{{ post.authors }}</div>
-        <div class="publication__excerpt">{{ post.excerpt }}</div>
+        <p class="publication__venue">{{ post.venue }}, {{ post.date | date: "%Y" }}</p>
 
         <div class="publication__links" aria-label="Links for {{ post.title }}">
-          {% if post.page_url %}<a href="{{ post.page_url }}">Paper <span aria-hidden="true">↗</span></a>{% endif %}
-          {% if post.project %}<a href="{{ post.project }}">Project <span aria-hidden="true">↗</span></a>{% endif %}
-          {% if post.arxiv %}<a href="{{ post.arxiv }}">Paper <span aria-hidden="true">↗</span></a>{% endif %}
-          {% if post.xplore %}<a href="{{ post.xplore }}">IEEE Xplore <span aria-hidden="true">↗</span></a>{% endif %}
-          {% if post.video %}<a href="{{ post.video }}">Video <span aria-hidden="true">↗</span></a>{% endif %}
-          {% if post.code %}<a href="{{ post.code }}">Code <span aria-hidden="true">↗</span></a>{% endif %}
-          {% if post.dataset %}<a href="{{ post.dataset }}">Dataset <span aria-hidden="true">↗</span></a>{% endif %}
-          {% if post.demo %}<a href="{{ post.demo }}">Demo <span aria-hidden="true">↗</span></a>{% endif %}
-          {% if post.poster %}<a href="{{ post.poster }}">Poster <span aria-hidden="true">↗</span></a>{% endif %}
-          {% if post.slides %}<a href="{{ post.slides }}">Slides <span aria-hidden="true">↗</span></a>{% endif %}
+          {% if post.page_url %}<a href="{{ post.page_url }}">paper</a>{% endif %}
+          {% if post.project %}<a href="{{ post.project }}">project page</a>{% endif %}
+          {% if post.arxiv %}<a href="{{ post.arxiv }}">paper</a>{% endif %}
+          {% if post.xplore %}<a href="{{ post.xplore }}">paper</a>{% endif %}
+          {% if post.video %}<a href="{{ post.video }}">video</a>{% endif %}
+          {% if post.code %}<a href="{{ post.code }}">code</a>{% endif %}
+          {% if post.dataset %}<a href="{{ post.dataset }}">dataset</a>{% endif %}
+          {% if post.demo %}<a href="{{ post.demo }}">demo</a>{% endif %}
+          {% if post.poster %}<a href="{{ post.poster }}">poster</a>{% endif %}
+          {% if post.slides %}<a href="{{ post.slides }}">slides</a>{% endif %}
           {% if post.bib %}
           <details class="publication__bib">
             <summary>BibTeX</summary>
@@ -46,6 +39,11 @@
           </details>
           {% endif %}
         </div>
+
+        <details class="publication__abstract">
+          <summary>abstract</summary>
+          <div>{{ post.excerpt }}</div>
+        </details>
       </div>
     </article>
     {% endfor %}
