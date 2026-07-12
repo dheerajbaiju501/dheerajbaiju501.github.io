@@ -5,6 +5,9 @@
 # Name of your site (displayed in the header)
 name: Dheeraj Baiju
 
+# Short description used in search and social previews
+description: Dheeraj Baiju is a pre-doctoral researcher at IISc Bangalore working on multimodal learning, generative models, and reliable AI.
+
 # Short bio or description (displayed in the header)
 # description: the profile of an engineer, researcher and software developer
 
@@ -18,12 +21,12 @@ avatar: images/ChatGPT Image May 31, 2025, 12_04_34 AM.png
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: "f20190187@pilani.bits-pilani.ac.in"
+  email: "dheerajbaiju501@gmail.com"
   facebook: 
   flickr:
   github: "dheerajbaiju501"
   instagram:
-  linkedin: "devaanshgupta"
+  linkedin: "dheerajbaiju"
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter:
