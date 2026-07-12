@@ -240,6 +240,7 @@ h2 {
 
 .beyond p {
   max-width: none;
+  white-space: nowrap;
   color: var(--muted);
 }
 
@@ -296,6 +297,10 @@ h2 {
 
   .publication__media {
     width: min(100%, 340px);
+  }
+
+  .beyond p {
+    white-space: normal;
   }
 }
 
