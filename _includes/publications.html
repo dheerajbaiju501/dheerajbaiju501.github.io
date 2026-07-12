@@ -22,9 +22,9 @@
         <p class="publication__venue">{{ post.venue }}, {{ post.date | date: "%Y" }}</p>
 
         <div class="publication__links" aria-label="Links for {{ post.title }}">
+          {% if post.arxiv %}<a href="{{ post.arxiv }}">paper</a>{% endif %}
           {% if post.page_url %}<a href="{{ post.page_url }}">paper</a>{% endif %}
           {% if post.project %}<a href="{{ post.project }}">project page</a>{% endif %}
-          {% if post.arxiv %}<a href="{{ post.arxiv }}">paper</a>{% endif %}
           {% if post.xplore %}<a href="{{ post.xplore }}">paper</a>{% endif %}
           {% if post.video %}<a href="{{ post.video }}">video</a>{% endif %}
           {% if post.code %}<a href="{{ post.code }}">code</a>{% endif %}
