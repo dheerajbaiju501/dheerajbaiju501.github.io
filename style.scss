@@ -149,6 +149,13 @@ h2 {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 10px;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.publication:hover {
+  border-color: #59616d;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+  transform: translateY(-4px);
 }
 
 .publication__media {
@@ -331,4 +338,5 @@ h2 {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
