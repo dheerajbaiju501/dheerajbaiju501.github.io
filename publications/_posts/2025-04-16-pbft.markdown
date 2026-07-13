@@ -6,4 +6,21 @@ authors: "Ameya Deshmukh, <strong>Dheeraj Baiju</strong>, Atish Atish, Tejasvi A
 venue: "TVT"
 xplore: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10966015"
 ---
-We propose a two-tiered BFT consensus framework for vehicular networks that uses geographic clustering to reduce messaging complexity from O(n²) to O(n¹·⁵), enhancing scalability and efficiency over traditional PBFT.
+Vehicular networks represent a new distributed system paradigm that requires robust fault tolerance to ensure reliable operation. As a burgeoning area of research, the scalability
+and optimization of consensus mechanisms for these networks are
+critical. Traditional Byzantine Fault Tolerant (BFT) algorithms
+like PBFT are not inherently optimized for the localized needs of
+vehicular networks, suffering from scalability issues due to their
+global nature and high messaging complexity. In response, we
+introduce a two-tiered consensus framework that refines PBFT
+for the specific context of vehicular networks. By organizing nodes
+into clusters based on geographic proximity, our approach reduces
+messaging complexity from O(n2) to O(n1.5), significantly improving scalability. The framework distinguishes between local and
+global state transitions, adding two phases to the PBFT protocol
+to manage these efficiently. This tailored consensus process aligns
+with the localized communication patterns of vehicular networks,
+enhancing both efficiency and scalability. The framework addresses
+the critical challenges of traditional BFT algorithms in vehicular
+networks, offering a solution that is both scalable and resilient. It is
+a step toward enabling vehicular networks to fulfil their potential
+as a reliable component of modern distributed systems
