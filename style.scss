@@ -4,12 +4,14 @@
 @import "reset";
 
 :root {
-  --text: #222226;
-  --muted: #5d626b;
-  --link: #1769aa;
-  --link-hover: #c45a18;
-  --line: #e2e4e8;
-  --paper: #ffffff;
+  color-scheme: dark;
+  --text: #e7e7ea;
+  --muted: #a9abb3;
+  --link: #72b7f2;
+  --link-hover: #f2b880;
+  --line: #3b3d43;
+  --paper: #1d1e22;
+  --surface: #24262b;
 }
 
 * { box-sizing: border-box; }
@@ -56,7 +58,7 @@ img {
   z-index: 10;
   padding: 0.5rem 0.75rem;
   color: #fff;
-  background: var(--link);
+  background: #285f8f;
   transform: translateY(-150%);
 }
 
@@ -176,7 +178,7 @@ h2 {
 }
 
 .publication__authors {
-  color: #353940;
+  color: #c4c5cb;
   font-size: 15px;
   line-height: 1.55;
 }
@@ -229,7 +231,7 @@ h2 {
 .publication__bib pre {
   overflow-x: auto;
   padding: 10px;
-  background: #f6f7f8;
+  background: var(--surface);
   font-size: 12px;
   white-space: pre-wrap;
 }
