@@ -21,10 +21,7 @@
         <div class="publication__authors">{{ post.authors }}</div>
         <p class="publication__venue">{{ post.venue }}, {{ post.date | date: "%Y" }}</p>
 
-        <details class="publication__abstract">
-          <summary>abstract</summary>
-          <div>{{ post.excerpt }}</div>
-        </details>
+        <button class="publication__abstract-toggle" type="button" aria-expanded="false">abstract</button>
 
         <div class="publication__links" aria-label="Links for {{ post.title }}">
           {% if post.arxiv %}<a href="{{ post.arxiv }}">paper</a>{% endif %}
@@ -44,6 +41,8 @@
           </details>
           {% endif %}
         </div>
+
+        <div class="publication__abstract" hidden>{{ post.excerpt }}</div>
 
       </div>
     </article>

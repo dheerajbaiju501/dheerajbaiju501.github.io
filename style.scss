@@ -217,7 +217,7 @@ h2 {
   font-size: 14px;
 }
 
-.publication__abstract + .publication__links::before {
+.publication__abstract-toggle ~ .publication__links::before {
   content: " · ";
   margin-right: 5px;
   color: var(--muted);
@@ -229,27 +229,47 @@ h2 {
   color: var(--muted);
 }
 
-.publication__abstract {
+.publication__abstract-toggle {
   display: inline-block;
-  margin-top: 10px;
+  padding: 0;
+  color: var(--link);
+  background: transparent;
+  border: 0;
+  font: inherit;
   font-size: 14px;
+  cursor: pointer;
 }
 
-.publication__abstract summary,
+.publication__abstract-toggle:hover {
+  color: var(--link-hover);
+}
+
+.publication__abstract {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.publication__abstract[hidden] {
+  display: none;
+}
+
+.publication__abstract-toggle:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
 .publication__bib summary {
   color: var(--link);
   cursor: pointer;
   list-style: none;
 }
 
-.publication__abstract summary::-webkit-details-marker,
 .publication__bib summary::-webkit-details-marker { display: none; }
 
-.publication__abstract > div {
-  margin-top: 10px;
-  color: var(--muted);
-  font-size: 16px;
-  line-height: 1.65;
+.publication__abstract > p {
+  margin: 0;
 }
 
 .publication__bib[open] {

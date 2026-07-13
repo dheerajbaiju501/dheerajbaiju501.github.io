@@ -22,5 +22,15 @@
     {{ content }}
   </div>
   {% include footer.html %}
+  <script>
+    document.querySelectorAll('.publication__abstract-toggle').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var abstract = button.parentElement.querySelector('.publication__abstract');
+        var expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', String(!expanded));
+        abstract.hidden = expanded;
+      });
+    });
+  </script>
 </body>
 </html>
