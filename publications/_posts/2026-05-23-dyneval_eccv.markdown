@@ -6,8 +6,8 @@ authors: "Shyam Marjit*, <strong>Dheeraj Baiju*</strong>, Anuj Shikarkhane, Akhi
 venue: "ECCV"
 arxiv: "https://drive.google.com/file/d/1rY5Qj_JWUJULmm3AYSeOE6znxU-sC38G/view"
 project: "https://vcl-iisc.github.io/dyneval/"
+code: "https://github.com/vcl-iisc/dyneval_code"
 ---
 We introduce DynEval, a dynamic framework for evaluating text-to-image generation that jointly assesses prompt alignment and image quality. To enable scalable training, we construct GenDB and DynEvalInstruct, two large-scale datasets containing generated prompt–image pairs and structured evaluation instructions. By distilling a strong multimodal teacher into compact 2B and 4B evaluator models, DynEval achieves higher correlation with human judgments than existing T2I evaluators while also providing fine-grained diagnostic feedback on generation failures.
-
 
 
