@@ -190,6 +190,9 @@ h2 {
 
 .publication__authors strong {
   font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 .publication__venue {
