@@ -153,6 +153,10 @@ h2 {
   width: 270px;
   aspect-ratio: 16 / 10;
   overflow: hidden;
+  padding: 10px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
 }
 
 .publication__image {
@@ -163,7 +167,9 @@ h2 {
 
 .publication__image--secondary {
   position: absolute;
-  inset: 0;
+  inset: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
   opacity: 0;
 }
 
