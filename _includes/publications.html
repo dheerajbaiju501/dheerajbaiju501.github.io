@@ -21,6 +21,11 @@
         <div class="publication__authors">{{ post.authors }}</div>
         <p class="publication__venue">{{ post.venue }}, {{ post.date | date: "%Y" }}</p>
 
+        <details class="publication__abstract">
+          <summary>abstract</summary>
+          <div>{{ post.excerpt }}</div>
+        </details>
+
         <div class="publication__links" aria-label="Links for {{ post.title }}">
           {% if post.arxiv %}<a href="{{ post.arxiv }}">paper</a>{% endif %}
           {% if post.page_url %}<a href="{{ post.page_url }}">paper</a>{% endif %}
@@ -39,11 +44,6 @@
           </details>
           {% endif %}
         </div>
-
-        <details class="publication__abstract">
-          <summary>abstract</summary>
-          <div>{{ post.excerpt }}</div>
-        </details>
 
       </div>
     </article>

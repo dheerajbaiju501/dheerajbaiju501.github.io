@@ -207,6 +207,12 @@ h2 {
   font-size: 14px;
 }
 
+.publication__abstract + .publication__links::before {
+  content: " · ";
+  margin-right: 5px;
+  color: var(--muted);
+}
+
 .publication__links > a + a::before {
   content: " · ";
   padding: 0 5px;
@@ -214,6 +220,7 @@ h2 {
 }
 
 .publication__abstract {
+  display: inline-block;
   margin-top: 10px;
   font-size: 14px;
 }
