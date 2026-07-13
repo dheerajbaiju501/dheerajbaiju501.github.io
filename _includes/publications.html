@@ -40,7 +40,10 @@
           {% endif %}
         </div>
 
-        <div class="publication__abstract">{{ post.excerpt }}</div>
+        <details class="publication__abstract">
+          <summary>abstract</summary>
+          <div>{{ post.excerpt }}</div>
+        </details>
 
       </div>
     </article>

@@ -214,19 +214,26 @@ h2 {
 }
 
 .publication__abstract {
-  margin: 11px 0 12px;
-  color: var(--muted);
-  font-size: 16px;
-  line-height: 1.65;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
+.publication__abstract summary,
 .publication__bib summary {
   color: var(--link);
   cursor: pointer;
   list-style: none;
 }
 
+.publication__abstract summary::-webkit-details-marker,
 .publication__bib summary::-webkit-details-marker { display: none; }
+
+.publication__abstract > div {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
 
 .publication__bib[open] {
   width: 100%;
