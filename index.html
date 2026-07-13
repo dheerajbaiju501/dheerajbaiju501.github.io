@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css?v=1783946629">
+  <link rel="stylesheet" href="/style.css?v=1783947252">
   <link rel="canonical" href="https://dheerajbaiju501.github.io/">
   <link rel="icon" href="/favicon.ico">
 </head>
@@ -177,8 +177,25 @@
 
         <details class="publication__abstract">
           <summary>abstract</summary>
-          <div><p>We introduce 𝐑𝐞𝐚𝐥𝐏𝐂, a real-world paired industrial object point cloud dataset, and show how it’s fundamentally different from existing synthetic datasets, exhibiting rich topological features.
-We highlight the importance of integrating Persistent Homology priors into existing point cloud completion models, and present a Homology Sampler-based completion model, 𝐁𝐎𝐒𝐇𝐍𝐞𝐭.</p>
+          <div><p>Point clouds acquired in constrained, challenging, uncontrolled, and multi-sensor real-world settings are noisy,
+incomplete, and non-uniformly sparse. This presents acute
+challenges for the vital task of point cloud completion. Using tools from Algebraic Topology and Persistent Homology
+(PH), we demonstrate that current benchmark object point
+clouds lack rich topological features that are integral part of
+point clouds captured in realistic environments. To facilitate
+research in this direction, we contribute the first real-world industrial dataset for point cloud completion, RealPC - a
+diverse, rich and varied set of point clouds. It consists of
+∼ 40,000 pairs across 21 categories of industrial structures
+in railway establishments. Benchmark results on several
+strong baselines reveal that existing methods fail in realworld scenarios. We discover a striking observation - unlike current datasets, RealPC consists of multiple 0- and
+1-dimensional PH-based topological features. We prove
+that integrating these topological priors into existing works
+helps improve completion. We present how 0-dimensional
+PH priors extract the global topology of a complete shape
+in the form of a 3D skeleton and assist a model in generating
+topologically consistent complete shapes. Since computing Homology is expensive, we present a simple, yet effective Homology Sampler guided network, BOSHNet that bypasses the Homology computation by sampling proxy backbones akin to 0-dim PH. These backbones provide similar
+benefits of 0-dim PH right from the start of the training,
+unlike similar methods where accurate backbones are obtained only during later phases of the training</p>
 </div>
         </details>
 
@@ -188,7 +205,7 @@ We highlight the importance of integrating Persistent Homology priors into exist
           
           
           
-          
+          <a href="https://github.com/stutipathak5/Point-Cloud-Completion">code</a>
           
           
           
