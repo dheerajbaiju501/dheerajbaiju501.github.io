@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css?v=1783947565">
+  <link rel="stylesheet" href="/style.css?v=1784007563">
   <link rel="canonical" href="https://dheerajbaiju501.github.io/">
   <link rel="icon" href="/favicon.ico">
 </head>
@@ -89,7 +89,22 @@
           
         </div>
 
-        <div class="publication__abstract" hidden><p>We introduce SAGA, a framework that uses a frozen multimodal large language model and GRPO-based optimization to provide attribute-aware supervision for visual retrieval. Instead of relying on coarse pair-level labels, SAGA learns from fine-grained semantic differences and similarities identified by the MLLM, improving retrieval embeddings while keeping inference cost unchanged.</p>
+        <div class="publication__abstract" hidden><p>Vision encoders for retrieval are typically trained with class-label supervision: each
+training pair reduces to a scalar that uniformly pushes the embedding apart or pulls
+it together, as if every visual attribute either differed or matched. A multimodal
+large language model (MLLM), shown the same pair, can articulate those attributes
+and use them to predict whether the images share a class. We propose SAGA, a
+framework that turns this language-grounded, attribute-aware perception into a
+training signal for the encoder itself. Specifically, we use Group Relative Policy
+Optimization (GRPO) to reward the MLLM for correct predictions on the vision
+encoder’s tokens. Since correct predictions require those tokens to expose the
+specific attributes that differ or match between the pair, the gradient pushes the
+encoder to encode them, replacing the uniform pair-level scalar with attributeresolved supervision. An auxiliary attention-distillation loss anchors the encoder’s
+embedding to tokens the MLLM attended to, and a standard metric-learning loss
+shapes the embedding geometry for nearest-neighbour retrieval. The MLLM is
+frozen throughout and discarded at inference, matching the deployment cost of a
+metric-learning baseline. SAGA improves Recall@1 by 3 to 6 points over stateof-the-art baselines on CUB-200-2011, Cars-196, FGVC-Aircraft, and iNaturalist
+Aves on zero-shot image retrieval.</p>
 </div>
 
       </div>
@@ -109,7 +124,7 @@
         <button class="publication__abstract-toggle" type="button" aria-expanded="false">abstract</button>
 
         <div class="publication__links" aria-label="Links for DynEval: Holistic Evaluations of T2I Generative Models in the Wild">
-          <a href="https://drive.google.com/file/d/1rY5Qj_JWUJULmm3AYSeOE6znxU-sC38G/view">paper</a>
+          <a href="https://arxiv.org/abs/2607.11199">paper</a>
           
           <a href="https://vcl-iisc.github.io/dyneval/">project page</a>
           
@@ -122,7 +137,10 @@
           
         </div>
 
-        <div class="publication__abstract" hidden><p>We introduce DynEval, a dynamic framework for evaluating text-to-image generation that jointly assesses prompt alignment and image quality. To enable scalable training, we construct GenDB and DynEvalInstruct, two large-scale datasets containing generated prompt–image pairs and structured evaluation instructions. By distilling a strong multimodal teacher into compact 2B and 4B evaluator models, DynEval achieves higher correlation with human judgments than existing T2I evaluators while also providing fine-grained diagnostic feedback on generation failures.</p>
+        <div class="publication__abstract" hidden><p>Recent advances in text-to-image (T2I) generation have led to models capable of producing highly realistic images. Yet, reliably evaluating their outputs remains challenging, especially at scale. Existing automatic evaluators, often relying on a static prompt set, struggle to capture subtle failure modes such as partial prompt misalignment, compositional errors or visually plausible but semantically incorrect generations. In this work, we introduce DynEval, a Dynamic Evaluation framework designed to jointly assess text-to-image alignment and image quality of T2I models. To support scalable training beyond limited human-annotated data, we construct two large datasets. First, we build GenDB,
+a collection of 500K prompt-image pairs generated from human-written prompts drawn from DiffusionDB using a tiered prompt-model generation strategy. Second, building upon GenDB, we construct DynEvalInstruct, a 250K instruction dataset comprising prompt-image-response triplets distilled from a structured evaluation pipeline that decomposes
+evaluation into text-image alignment and visual quality reasoning. Using
+this dataset, we perform full fine-tuning of a compact evaluator through a curriculum learning strategy to effectively distill the superior evaluation capabilities of a larger teacher vision-language model, resulting in DynEval-2B and DynEval-4B. In extensive comparisons against existing evaluators across 11 benchmarks, our evaluator achieves a higher overall correlation with human judgments. Furthermore, it provides finegrained analysis of the capabilities and failure modes of 36 T2I models across 42 subcategories and 9 semantic dimensions.</p>
 </div>
 
       </div>
@@ -155,7 +173,23 @@
           
         </div>
 
-        <div class="publication__abstract" hidden><p>This survey studies the evolution of multimodal AI agents that combine perception, reasoning, planning, memory, and action across text, images, audio, and video. It introduces a modality-centric taxonomy of agent architectures, analyzes multimodal fusion strategies, and reviews applications spanning robotics, web navigation, multimedia generation, and long-form video understanding, while highlighting key challenges toward building robust general-purpose agentic systems.</p>
+        <div class="publication__abstract" hidden><p>Advances in large language models (LLMs) have fueled a wave of research into agency: the
+ability to reason, plan, and act. This effort has produced agentic frameworks that orchestrate perception, memory, and decision-making around powerful LLM backbones. With
+the advent of large multimodal models (LMMs), these systems can process and integrate
+diverse modalities, including images, audio, and video, thereby improving their real-world
+applicability. Yet, while surveys of LLM-based agents exist, the role of multimodality in
+shaping agency has not been systematically examined in recent years. This survey fills
+the gap by analyzing the impact of multimodality across the core functional modules of
+the agentic framework: perception, reasoning, planning, memory, and action. Using this
+lens, we trace the evolution from text-centric agents to multimodal frameworks, examine
+how modalities are integrated through delegated, late-fusion, and early-fusion architectures,
+and assess the emergence of agentic behaviors enabled by grounded perception and multimodal reasoning. We organize existing work through a modality-centric taxonomy that
+links architectural design choices to agent capabilities. Moreover, we review multimodal
+agentic systems across various application domains, including Robotics, GUI &amp; Web Navigation, Multimedia Content Generation &amp; Editing, and Long-form Video Understanding
+&amp; Retrieval. Beyond capabilities, we analyze performance across these settings and discuss
+efficiency-scalability trade-offs, including training and inference costs, latency, and deployment constraints. By focusing on the impact of multimodality in agentic design, we aim
+to identify key gaps and chart a roadmap toward robust and general-purpose intelligent
+systems.</p>
 </div>
 
       </div>
@@ -248,7 +282,7 @@ global nature and high messaging complexity. In response, we
 introduce a two-tiered consensus framework that refines PBFT
 for the specific context of vehicular networks. By organizing nodes
 into clusters based on geographic proximity, our approach reduces
-messaging complexity from O(n2) to O(n1.5), significantly improving scalability. The framework distinguishes between local and
+messaging complexity from O(n²) to O(n¹·⁵), significantly improving scalability. The framework distinguishes between local and
 global state transitions, adding two phases to the PBFT protocol
 to manage these efficiently. This tailored consensus process aligns
 with the localized communication patterns of vehicular networks,
