@@ -15,7 +15,7 @@ global nature and high messaging complexity. In response, we
 introduce a two-tiered consensus framework that refines PBFT
 for the specific context of vehicular networks. By organizing nodes
 into clusters based on geographic proximity, our approach reduces
-messaging complexity from O(n2) to O(n1.5), significantly improving scalability. The framework distinguishes between local and
+messaging complexity from O(n²) to O(n¹·⁵), significantly improving scalability. The framework distinguishes between local and
 global state transitions, adding two phases to the PBFT protocol
 to manage these efficiently. This tailored consensus process aligns
 with the localized communication patterns of vehicular networks,
