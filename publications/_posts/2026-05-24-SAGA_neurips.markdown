@@ -3,7 +3,7 @@ title:  "Beyond Scalar Distances: Semantic Attribute Gradients from Frozen MLLMs
 date:   2026-05-24 22:21:59 +00:00
 image: /publications/images/SAGA-neurips-fig.png
 authors: "Shubhang Bhatnagar*, <strong>Dheeraj Baiju*</strong>, Narendra Ahuja."
-venue: "Under Review"
+venue: "NeurIPS"
 arxiv: "https://arxiv.org/pdf/2606.15134"
 project: "https://shubhangb97.github.io/saga/"
 ---
@@ -23,7 +23,6 @@ shapes the embedding geometry for nearest-neighbour retrieval. The MLLM is
 frozen throughout and discarded at inference, matching the deployment cost of a
 metric-learning baseline. SAGA improves Recall@1 by 3 to 6 points over stateof-the-art baselines on CUB-200-2011, Cars-196, FGVC-Aircraft, and iNaturalist
 Aves on zero-shot image retrieval.
-
 
 
 
