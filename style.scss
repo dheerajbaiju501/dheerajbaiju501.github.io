@@ -131,6 +131,10 @@ h1 {
 }
 
 .news-list li {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 16px;
+  align-items: baseline;
   margin: 8px 0;
   padding: 14px 18px;
   background: var(--accent-soft);
@@ -140,9 +144,9 @@ h1 {
 }
 
 .news-list time {
-  margin-right: 6px;
   color: var(--muted);
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .section-title {
@@ -372,6 +376,11 @@ h2 {
     align-items: start;
     margin: 16px 0;
     padding: 20px;
+  }
+
+  .news-list li {
+    grid-template-columns: 1fr;
+    gap: 3px;
   }
 
   .publication__media {
