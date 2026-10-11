@@ -4,7 +4,8 @@ date:   2026-05-22 22:21:59 +00:00
 image: /publications/images/tmlr-diag.png
 authors: "Neel Mokaria*, Rishie Raj*, <strong>Dheeraj Baiju*</strong>, Xiaoqian Shen, Shraman Pramanick, Kevin Qinghong Lin, Arda Senocak, Mike Zheng Shou, Philip Torr, Mohamed Elhoseiny, Yapeng Tian, Ruohan Gao, Salman Khan, Sayan Nag, Sanjoy Chowdhury, Dinesh Manocha"
 venue: "TMLR"
-arxiv: "https://openreview.net/pdf?id=eaVoaI7f8v"
+arxiv: "https://arxiv.org/pdf/2608.20379"
+code: "https://github.com/rishieraj/awesome-multimodal-agents"
 ---
 Advances in large language models (LLMs) have fueled a wave of research into agency: the
 ability to reason, plan, and act. This effort has produced agentic frameworks that orchestrate perception, memory, and decision-making around powerful LLM backbones. With
@@ -23,7 +24,6 @@ agentic systems across various application domains, including Robotics, GUI & We
 efficiency-scalability trade-offs, including training and inference costs, latency, and deployment constraints. By focusing on the impact of multimodality in agentic design, we aim
 to identify key gaps and chart a roadmap toward robust and general-purpose intelligent
 systems.
-
 
 
 
