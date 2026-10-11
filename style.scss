@@ -12,7 +12,6 @@
   --line: #313347;
   --paper: #0c0d12;
   --surface: #161823;
-  --accent-soft: #1c1d36;
 }
 
 * { box-sizing: border-box; }
@@ -135,12 +134,13 @@ h1 {
   grid-template-columns: 110px minmax(0, 1fr);
   gap: 16px;
   align-items: baseline;
-  margin: 8px 0;
-  padding: 14px 18px;
-  background: var(--accent-soft);
-  border: 1px solid #393b62;
-  border-left: 3px solid var(--link);
-  border-radius: 8px;
+  margin: 0;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.news-list li:last-child {
+  border-bottom: 0;
 }
 
 .news-list time {
