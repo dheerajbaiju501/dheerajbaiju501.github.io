@@ -12,6 +12,7 @@
   --line: #313347;
   --paper: #0c0d12;
   --surface: #161823;
+  --accent-soft: #1c1d36;
 }
 
 * { box-sizing: border-box; }
@@ -136,12 +137,17 @@ h1 {
 
 .news-list {
   margin: 0;
-  padding-left: 22px;
-  list-style: disc;
+  padding: 0;
+  list-style: none;
 }
 
 .news-list li {
-  margin: 7px 0;
+  margin: 8px 0;
+  padding: 14px 18px;
+  background: var(--accent-soft);
+  border: 1px solid #393b62;
+  border-left: 3px solid var(--link);
+  border-radius: 8px;
 }
 
 .news-list time {
